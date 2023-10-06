@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("/img/fondoDinastia.png");
+}
+
+a,
+li {
+  color: #fcc02c;
+  margin: 10px;
+  transition: all 0.5s ease;
+}
+
+.logo {
+  width: 140px;
+  margin: 40px;
+}
+
+.header {
+  background-color: black;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+}
+
+.navbar ul {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.navbar li {
+  margin-right: 1.5rem;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+  color: #e28102;
+  transform: translateY(-5px);
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.men img {
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+}
+.men,
+#check {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .men {
+    display: block;
+    position: static;
+    top: 60px;
+    right: 20px;
+  }
+
+  header {
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+  }
+
+  .logo {
+    width: 80px;
+    margin-top: 20px;
+  }
+
+  .navbar ul {
+    display: block;
+    position: fixed;
+    top: 100px;
+    left: -100%;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    margin-top: 20px;
+  }
+
+  .navbar ul li {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .navbar ul li:last-child {
+    background: none;
+    border: none;
+    padding: 1rem;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+.txt h3 {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 80px;
+  margin: 80px;
+}
+
+.txt h2 {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 80px;
+  margin: 80px;
+}
+
+@media (max-width: 768px) {
+  .txt h3 {
+    font-size: 60px;
+  }
+  .txt h2 {
+    font-size: 60px;
+  }
+}
