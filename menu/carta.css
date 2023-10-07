@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container-post {
+  max-width: 1200px;
+  margin: auto;
+}
+.posts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.posts .post {
+  background-color: #fcc12cd8;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  transition: all 400ms ease-out;
+}
+.posts .post:hover {
+  transform: translateY(-3%);
+}
+.post .ctn-img {
+  width: 100%;
+}
+
+.post .ctn-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 0px 20px;
+  font-weight: 800;
+}
+.post span {
+  margin-top: 10px;
+  display: block;
+  padding: 0px 20px;
+  font-weight: 500;
+}
+.post button {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px 50px;
+  font-size: 16px;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #fcc02c;
+}
+
+.post button:hover {
+  opacity: 0.9;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.container-category {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.container-category label {
+  padding: 6px 40px;
+  margin: 10px;
+  font-size: 20px;
+  background: #fcc02c;
+  color: #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+.container-category label:hover {
+  opacity: 0, 9;
+}
+/*sistema de filtrado*/
+[value="TODO"]:checked ~ .posts .post[data-category] {
+  display: block;
+}
+
+[value="HAMBURGUESAS"]:checked
+  ~ .posts
+  .post:not([data-category~="HAMBURGUESAS"]),
+[value="SALCHIS"]:checked ~ .posts .post:not([data-category~="SALCHIS"]),
+[value="ALITAS"]:checked ~ .posts .post:not([data-category~="ALITAS"]),
+[value="BROASTER"]:checked ~ .posts .post:not([data-category~="BROASTER"]),
+[value="CHAUFONES"]:checked ~ .posts .post:not([data-category~="CHAUFONES"]),
+[value="CRIOLLAZOS"]:checked ~ .posts .post:not([data-category~="CRIOLLAZOS"]),
+[value="COMBOS"]:checked ~ .posts .post:not([data-category~="COMBOS"]) {
+  display: none;
+}
+[value="TODO"]:checked ~ .container-category [for="TODO"],
+[value="HAMBURGUESAS"]:checked ~ .container-category [for="HAMBURGUESAS"],
+[value="SALCHIS"]:checked ~ .container-category [for="SALCHIS"],
+[value="ALITAS"]:checked ~ .container-category [for="ALITAS"],
+[value="BROASTER"]:checked ~ .container-category [for="BROASTER"],
+[value="CHAUFONES"]:checked ~ .container-category [for="CHAUFONES"],
+[value="CRIOLLAZOS"]:checked ~ .container-category [for="CRIOLLAZOS"],
+[value="COMBOS"]:checked ~ .container-category [for="COMBOS"] {
+  background: #fc782c;
+  color: #000000;
+}
+@media screen and (max-width: 1200px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
