@@ -28,28 +28,34 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="index/index.css" />
-    <link rel="stylesheet" href="index/footer.css" />
-    <link rel="stylesheet" href="index/combos.css" />
-    <link rel="stylesheet" href="index/menu.css" />
+    <link rel="stylesheet" href="css/index/index.css" />
+    <link rel="stylesheet" href="css/index/footer.css" />
+    <link rel="stylesheet" href="css/index/combos.css" />
+    <link rel="stylesheet" href="css/index/menu.css" />
+    <link rel="stylesheet" href="css/index/carga.css" />
+    <link rel="stylesheet" href="css/global.css" />
 
     <title>Inicio - Dinastia DAAM</title>
   </head>
   <body>
+    <div class="pantalla-carga">
+        <img src="img/carga.svg" alt="Cargando..." height="30%">
+    </div>
+    <div class="contenido">
     <!-- BARRA NAV -->
     <header class="header">
-      <img class="logo" src="/img/D.png" alt="" />
+      <img class="logo" src="img/D.svg" alt="" />
 
       <div class="navbar">
         <input type="checkbox" id="check" />
         <label for="check" class="checkbtn">
-          <i class="men"><img src="img/menu.png" alt="" /></i>
+          <i class="men"><img src="img/menu.svg" alt="" /></i>
         </label>
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="menu.html">Carta</a></li>
-          <li><a href="#">Promos</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="promos.html">Promos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
           <li>
             <a
               target="_blank"
@@ -62,9 +68,7 @@
     </header>
 
     <!-- SLIDER -->
-    <div class="txt">
-      <h2>PROMOS</h2>
-    </div>
+
     <div
       id="carouselExampleIndicators"
       class="carousel slide"
@@ -231,5 +235,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/javascript.js"></script>
-  </body>
+      </body>
 </html>

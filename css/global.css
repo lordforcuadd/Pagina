@@ -1,0 +1,20 @@
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 40px;
+}
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar-thumb {
+  background: #fcc02c;
+  border-radius: 40px;
+}
+
+/* Estilo del pulgar cuando se desplaza */
+::-webkit-scrollbar-thumb:hover {
+  background: #f87d2a;
+}

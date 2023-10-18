@@ -41,6 +41,7 @@
 .card img {
   width: 100%;
   height: 210px;
+  color: #fcc02c;
 }
 .card .contenido-card {
   padding: 15px;
